@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>kc.spring</groupId>
+	<artifactId>spring.testing</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>spring boot testing</name>
+	<description>testing app for springboot</description>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.4.RELEASE</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+
+	<properties>
+		<skipTests>true</skipTests>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+		<spring-cloud.version>Dalston.SR1</spring-cloud.version>
+	</properties>
+
+	<repositories>
+		<repository>
+			<id>nexus-central</id>
+			<name>nexus-central</name>
+			<url>http://cicd-artrepo.loblaw.ca:8080/nexus/content/repositories/central/</url>
+		</repository>
+		<repository>
+			<id>nexus-sdm</id>
+			<name>nexus-sdm</name>
+			<url>http://cicd-artrepo.loblaw.ca:8080/nexus/content/repositories/thirdparty</url>
+		</repository>
+	</repositories>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<snapshots />
+			<id>nexus-central</id>
+			<name>nexus-central</name>
+			<url>http://cicd-artrepo.loblaw.ca:8080/nexus/content/repositories/central/</url>
+		</pluginRepository>
+		<pluginRepository>
+			<snapshots />
+			<id>nexus-pcb-external</id>
+			<name>nexus-pcb-external</name>
+			<url>http://cicd-artrepo.loblaw.ca:8080/nexus/content/repositories/thirdparty</url>
+		</pluginRepository>
+
+	</pluginRepositories>
+
+
+	<dependencies>
+		<dependency>
+			<groupId>ca.loblaw</groupId>
+			<artifactId>CommonJava</artifactId>
+			<version>0.0.2</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>ca.loblaw</groupId>
+			<artifactId>CacheTableJava</artifactId>
+			<version>0.0.1</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>ca.loblaw</groupId>
+			<artifactId>AuditLogJAXBJava</artifactId>
+			<version>0.0.1</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>de.codecentric</groupId>
+			<artifactId>spring-boot-admin-starter-client</artifactId>
+			<version>1.5.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jersey</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web-services</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.mod4j.org.apache.commons</groupId>
+			<artifactId>lang</artifactId>
+			<version>2.1.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-httpclient</groupId>
+			<artifactId>commons-httpclient</artifactId>
+			<version>3.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-logging</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-log4j2</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-messaging</artifactId>
+			<!-- <version>5.0.4.RELEASE</version> -->
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jms</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.jms</groupId>
+			<artifactId>javax.jms-api</artifactId>
+			<version>2.0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.ibm.mq</groupId>
+			<artifactId>com.ibm.mq.allclient</artifactId>
+			<version>9.0.4.0</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.interceptor</groupId>
+			<artifactId>javax.interceptor-api</artifactId>
+			<version>1.2.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.oracle</groupId>
+			<artifactId>ojdbc</artifactId>
+			<version>11.2.0</version>
+			<!-- <scope>system</scope> <systemPath>C:\RTC\rad8\lib\ojdbc6.jar</systemPath> -->
+		</dependency>
+		<dependency>
+			<groupId>com.oracle</groupId>
+			<artifactId>ojdbc</artifactId>
+			<version>11.2.0</version>
+		</dependency>
+		
+		<dependency>
+                     <groupId>io.springfox</groupId>
+                     <artifactId>springfox-swagger2</artifactId>
+                     <version>2.6.1</version>
+              </dependency>
+
+              <dependency>
+                     <groupId>io.springfox</groupId>
+                     <artifactId>springfox-swagger-ui</artifactId>
+                     <version>2.6.1</version>
+              </dependency>
+		
+
+	</dependencies>
+
+
+	<build>
+		<plugins>
+			<!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-dependency-plugin</artifactId> 
+				<executions> <execution> <id>copy-dependencies</id> <phase>compile</phase> 
+				<goals> <goal>copy-dependencies</goal> </goals> <configuration> <outputDirectory>lib</outputDirectory> 
+				<includeScope>system</includeScope> <additionalClasspathElements> <additionalClasspathElement>lib</additionalClasspathElement> 
+				</additionalClasspathElements> </configuration> </execution> </executions> 
+				</plugin> -->
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<goals>
+							<goal>build-info</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+<!--
+			<plugin>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.5.2</version>
+				<configuration>
+					<tagBase />
+				</configuration>
+			</plugin>
+ -->
+		</plugins>
+
+	</build>
+
+
+</project>
