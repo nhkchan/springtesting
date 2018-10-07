@@ -57,6 +57,25 @@
 
 
 	<dependencies>
+		<!-- for JSON return  -->
+		<!--
+		<dependency>
+		    <groupId>org.json</groupId>
+		    <artifactId>json</artifactId>
+		    <version>20090211</version>
+		</dependency>
+		-->
+		<dependency>
+		    <groupId>javax.json</groupId>
+		    <artifactId>javax.json-api</artifactId>
+		    <version>1.0</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.glassfish</groupId>
+		    <artifactId>javax.json</artifactId>
+		    <version>1.1</version>
+		</dependency>
+		<!-- end  -->
 		<dependency>
 			<groupId>ca.loblaw</groupId>
 			<artifactId>CommonJava</artifactId>
